@@ -47,7 +47,7 @@
 #KEY[2]
     set_location_assignment PIN_AA14 -to slct_sb_i[2]
 #KEY[3]
-    set_location_assignment PIN_AA15  -to slct_reg_i[3]
+    set_location_assignment PIN_AA15  -to en_reg_i[3]
 
 # -------------------------------------------------------------------------- #
 
@@ -64,7 +64,7 @@
 #LEDR[4]
     set_location_assignment PIN_AG25 -to counter_slct_op_o[4]
 #LEDR[5]
-    set_location_assignment PIN_AF25 -to flag_o[5]
+    set_location_assignment PIN_AF25 -to led[5]
 #LEDR[6]
     set_location_assignment PIN_AE24 -to flag_o[6]
 #LEDR[7]
@@ -72,7 +72,7 @@
 #LEDR[8]
     set_location_assignment PIN_AB22 -to flag_o[8]
 #LEDR[9]
-#	set_location_assignment PIN_AC22 -to led[9]
+#	set_location_assignment PIN_AC22 -to flag_o[9]
 
 # -------------------------------------------------------------------------- #
 
