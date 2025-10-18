@@ -132,7 +132,7 @@
 # GPIO
 
 #GPIO[0]
-#	set_location_assignment PIN_W15 -to gpio[0]
+3et_location_assignment PIN_W15 -to gpio[0]
 #GPIO[1]
 #	set_location_assignment PIN_AK2 -to gpio[1]
 #GPIO[2]
