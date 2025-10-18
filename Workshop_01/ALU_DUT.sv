@@ -3,10 +3,10 @@ module ALU_DUT #(
   )(
     input  logic [1:0]        cntrl_alu_i,
     input  logic [WIDTH-1:0]  reg_a_i,
-  	input  logic [WIDTH-1:0]													reg_b_i,
+										reg_b_i,
 
     output logic              carry_o,
-    output logic              result_o
+    output logic [WIDTH-1:0]             result_o
   );
   
   // Internal variable
