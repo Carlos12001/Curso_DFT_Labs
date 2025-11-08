@@ -147,10 +147,30 @@ module tb_LabFPGA2;
 		
 		// Continue your code here....
 		
-		// Test case 2: A = 0x00xxx, B = 0x00xxx, operation = ? (x)
-		// calc(4'dx, 24'hxxx, 24'hxxx);
-		
-		
+		// Test case 2: A = 0x00FFF, B = 0x00FFF, operation = SUB (1)
+		calc(4'd1, 24'hFFF, 24'hFFF);
+		// Expected result: 0x000000
+
+		// Test case 3: A = 0x0000F0, B = 0x000FFF, operation = AND (4)
+		calc(4'd4, 24'h00F0, 24'h0FFF);
+		// Expected result: 0x0000F0
+
+		// Test case 4: A = 0x000F00, B = 0x000FFF, operation = OR (5)
+		calc(4'd5, 24'h0F00, 24'h0FFF);
+		// Expected result: 0x000FFF
+
+		// Test case 5: A = 0x000FFF, B = 0x000FFF, operation = NOT A (6)
+		calc(4'd6, 24'hFFF, 24'hFFF);
+		// Expected result: 0x000000
+
+		// Test case 7: A = 0x000FFF, B = 0x000FFF, operation = NOT B (7)
+		calc(4'd7, 24'hFFF, 24'hFFF);
+		// Expected result: 0x000000
+
+		// XOR operation: A = 0x0000F0, B = 0x000FFF, operation = XOR (8)
+		calc(4'd8, 24'h00F0, 24'h0FFF);
+		// Expected result: 0x000F0F
+
 		$finish;
 	end
 
