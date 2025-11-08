@@ -147,29 +147,29 @@ module tb_LabFPGA2;
 		
 		// Continue your code here....
 		
-		// Test case 2: A = 0xFFFFFF, B = 0xFFFFFF, operation = SUB (1)
-		calc(4'd1, 24'hFFFFFF, 24'hFFFFFF);
+		// Test case 2: A = 0x000FFF, B = 0x00FFF, operation = SUB (1)
+		calc(4'd1, 24'hFFF, 24'hFFF);
 		// Expected result: 0x000000
 
-		// Test case 3: A = 0xF0F0F0, B = 0xF0F0F0, operation = AND (4)
-		calc(4'd4, 24'hF0F0F0, 24'hF0F0F0);
-		// Expected result: 0xF0F0F0
+		// Test case 3: A = 0x0000F0, B = 0x000FFF, operation = AND (4)
+		calc(4'd4, 24'h00F0, 24'h0FFF);
+		// Expected result: 0x0000F0
 
-		// Test case 4: A = 0x0F0F0F, B = 0x000000, operation = OR (5)
-		calc(4'd5, 24'h0F0F0F, 24'h000000);
-		// Expected result: 0x0F0F0F
+		// Test case 4: A = 0x000F00, B = 0x000FFF, operation = OR (5)
+		calc(4'd5, 24'h0F00, 24'h0FFF);
+		// Expected result: 0x000FFF
 
-		// Test case 5: A = 0x000000, B = 0x000000, operation = NOT A (6)
-		calc(4'd6, 24'h000000, 24'h000000);
-		// Expected result: 0xFFFFFF
+		// Test case 5: A = 0x000FFF, B = 0x000FFF, operation = NOT A (6)
+		calc(4'd6, 24'hFFF, 24'hFFF);
+		// Expected result: 0x000000
 
-		// Test case 7: A = 0x000000, B = 0x000000, operation = NOT B (7)
-		calc(4'd7, 24'h000000, 24'h000000);
-		// Expected result: 0xFFFFFF
+		// Test case 7: A = 0x000FFF, B = 0x000FFF, operation = NOT B (7)
+		calc(4'd7, 24'hFFF, 24'hFFF);
+		// Expected result: 0x000000
 
-		// XOR operation: A = 0xAAAAAA, B = 0x555555, operation = XOR (8)
-		calc(4'd8, 24'hAAAAAA, 24'h555555);
-		// Expected result: 0xFFFFFFFF
+		// XOR operation: A = 0x0000F0, B = 0x000FFF, operation = XOR (8)
+		calc(4'd8, 24'h00F0, 24'h0FFF);
+		// Expected result: 0x000F0F
 
 		$finish;
 	end
