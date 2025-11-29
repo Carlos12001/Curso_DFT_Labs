@@ -112,9 +112,9 @@ module tb_LabFPGA3;
 
 	// Continue your code here....
 		
-	run_BIST(4'd0);
-	run_BIST(4'd4);
-	run_BIST(4'd5);
+	run_BIST(4'd8);
+	run_BIST(4'd9);
+	run_BIST(4'd10);
 
 
 	
